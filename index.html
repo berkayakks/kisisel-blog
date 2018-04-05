@@ -1,0 +1,828 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Coda+Caption:800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Coda+Caption:800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
+    <link rel="stylesheet" href="animate.css">
+
+    <style>
+     body { 
+       overflow-x: hidden !important; 
+       }
+      .navbar-default
+      {
+        
+        background-color: #ba7ece;
+        box-shadow: 0 0 6px 4px black;
+      }
+      #navbarNav{
+        padding-right: 80px;
+      }
+      .navbar-brand{
+      
+         padding-left: 80px;
+        text-shadow: 2px 2px white;
+        font-size: 20px;
+        color:black !important;
+        font-family: 'Cabin Sketch', cursive;
+      }
+      
+      .navbar-nav .nav-link{
+        font-family: 'Cabin Sketch', cursive;
+        color:white !important;
+        border-bottom:  #ba7ece dotted 5px;
+        transition: color 1s;
+       }
+      .navbar-nav .nav-link:hover{
+       
+        color:black !important;
+        border-bottom: pink dotted 5px;
+        
+      }
+      .container,row{
+        max-width: 1140px;
+        margin: 0 auto;
+      }
+      #üst-alan{
+        height: 700px;
+      }
+      #üst-alan{
+        background: url("foto1.jpg") no-repeat center center fixed;
+       background-size: cover;
+      }
+      .üst-alan-orta h1{
+        color:black;
+       font-size: 60px;
+        margin-top: 10%;
+        font-family: 'Coda Caption', sans-serif;
+      }
+      .üst-alan-orta h4{
+        color:black;
+       font-size: 30px;
+        margin-top: 25px;
+        font-family: 'Nunito', sans-serif;
+      }
+      .üst-alan-orta h3{
+        text-shadow: 2px 2px 3px black ;
+        color:white;
+       font-size: 30px;
+        margin-top: 25px;
+        font-family: 'Dancing Script', cursive;
+      }
+      .üst-alan-orta button{
+       background-color: white;
+        margin-top: 15px;
+        padding-right: 30px;
+        padding-left: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+         color: black;
+        transition: background-color 1s;
+      }
+      .üst-alan-orta button:hover{
+         background-color: #ba7ece;
+        margin-top: 15px;
+        padding-right: 30px;
+        padding-left: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+       color: white;
+      }
+      #orta-alan{
+        margin-top: 50px;
+        height: 10%;
+       
+      }
+      #orta-alan h2{
+        font-family: 'Nunito', sans-serif;
+        font-weight: bold;
+        font-size: 40px;
+        margin-bottom: 20px;
+        margin-top: -10px;
+        color:#333;
+      }
+      .media{
+        margin-top: 20px;
+      }
+      .yuvarlak{
+        width: 70px;
+        height: 70px;
+        background-color: #ba7ece;
+        border-radius: 70px;
+        margin-right: 20px;
+      }
+      .yuvarlak .fa{
+        margin:12px 5px;
+        text-align: center;
+        color: white;
+        
+      }
+      
+      .yuvarlak .fa-road{
+        margin:10px 10px;
+        text-align: center;
+        color: white;
+      }
+      
+      .yuvarlak .fa-book{
+        margin:10px 12px;
+        text-align: center;
+        color: white;
+      }
+      .yuvarlak .fa-star{
+        margin:12px 13px;
+        text-align: center;
+        color: white;
+      }
+      #orta-alan-alt{
+        margin-top:60px;
+        background-color: #FBF8EF;
+        padding-top: 30px;
+      }
+      .card{
+        border: 1px solid #ba7ece;
+        margin-bottom: 20px;
+        
+      }
+      .card-body .btn{
+        background-color: white;
+        border: solid 1px #ba7ece;
+        color:black;
+        border-radius: 20px;
+        transition: 1s ease;
+      }
+     
+      .card-body .card-title{
+        color:#333;
+        text-align: center;
+        text-transform:uppercase;
+        font-weight: bold;
+        border-bottom: 1px solid #ba7ece;
+      }
+      .card-body a{
+        text-decoration: none;
+       
+      }
+      .card-body .makale-button{
+        width: 100px;
+        margin:0 auto;
+        
+      }
+      
+      .card-body .btn:hover{
+        background-color: #ba7ece;
+        border: solid 1px black ;
+        color:white;
+        
+        
+      }
+      .card {
+       
+        overflow: hidden;
+      }
+     
+      .zoom{cursor: pointer; width:330px;height:150px;background-image:url("foto3.jpg");background-position:center;background-repeat:no-repeat;background-size:330px 210px;transition:background-size 1s;transition: 1s linear ;-webkit-transition:background-size 1s;-moz-transition:background-size 1s;-o-transition:background-size 1s; }
+
+      .zoom:hover{
+        background-size:530px 310px;
+        
+        filter: brightness(0.5);
+        }
+      .zoom2{
+       
+        cursor: pointer; width:330px;height:150px;background-image:url("foto4.jpg");background-position:center;background-repeat:no-repeat;background-size:330px 210px;transition:background-size 1s;transition: 1s linear ;-webkit-transition:background-size 1s;-moz-transition:background-size 1s;-o-transition:background-size 1s; }
+
+      .zoom2:hover{
+        background-size:530px 310px;
+        
+        filter: brightness(0.5);
+        }
+        .chance-menü{
+         
+        	background-color: #ba7ece;
+	        
+	        opacity: 0.9;
+	        padding: 0 0;
+          border-bottom:  #ba7ece dotted 5px;
+        }
+        .profilim{
+          
+        }
+        .profil-title{
+           font-size: 20px;
+           font-weight: bold;
+           margin-bottom: 20px;
+           border-bottom: 1px solid   #ba7ece;
+           transition: color 0.5s;
+           cursor: pointer;
+        }
+        .profilim .fa{
+          margin-left: 10px;
+          cursor: pointer;
+          transition: color 0.5s;
+        }
+        .profilim .fa:hover,.profil-title:hover{
+          color: #ba7ece !important;
+        }
+        .input-group{
+          margin-bottom: 20px;
+          width: 286px;
+        }
+        .form-control{
+          border: 1px solid #ba7ece;
+        }
+        .input-group-prepend{
+          border: 1px solid #ba7ece;
+          margin-left: 5px;
+          transition: background-color 1s;
+        }
+        .input-group-prepend:hover{
+          cursor: pointer;
+        }
+        .pop-makale{
+          width: 286px;
+          height: 500px;
+          border: 1px solid #ba7ece;
+        }
+        .pop-makale-text{
+          margin-top: 10px;
+          margin-left: 5px;
+          font-size: 20px;
+          width: 60%;
+          border-bottom: 3px dotted #ba7ece;
+          cursor: pointer;
+        }
+        .pop-makale-img{
+          width: 70px;
+          height: 70px;
+          margin-left: 10px;
+          border: 1px solid black;
+          padding: 5px;
+          cursor: pointer;
+
+        }
+        .pop-makale-yanyazi{
+          font-size: 18px;
+          color:dimgray;
+          cursor: pointer;
+        }
+        .pop-makale-tarih{
+          margin-top: 10px;
+          font-size: 12px;
+          color:dimgray;
+        }
+        .üst-alan {
+                position: relative;
+                width: 100%;
+                margin: 0 auto;
+                margin-bottom: 50px;
+                transition: .5 ease;
+            }
+           
+            
+            .image {
+                
+                width: 100%;
+                height: 200px;
+                border: 1px solid #ba7ece;
+                
+                box-shadow: 0 0 6px 4px black;
+              
+            }
+            
+            .overlay {
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              height: 0;
+              width: 100%;
+              opacity: 0;
+              transition: .5s ease;
+              background-color: black;
+              
+              
+            }
+            
+            .üst-alan:hover .overlay {
+              height: 100%;
+              opacity: 0.8;
+            
+              
+            }
+            
+            
+            .text {
+              color: white;
+              font-size: 20px;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+              text-align: center;
+            }
+            .alt-alan-üst-text{
+              padding-top: 20px;
+              margin-top: 25px;
+              margin-bottom: 50px;
+            }
+            #alt-alan-üst{
+              background: url("alt-alan-üst.jpg") no-repeat center center fixed;
+              background-size: cover;;
+            }
+            #footer{
+              padding-top:20px;
+              padding-bottom: 1px;
+              background: url("footer.jpg") no-repeat center center fixed;
+              background-size: cover;
+            }
+            .footer a{
+              color: #A4A4A4;
+              text-decoration: none;
+              
+            }
+            .footer h4{
+              color: white;
+              border-bottom: 2px dotted #A4A4A4;
+              padding-bottom: 5px;
+              width: 300px;
+            }
+            .footer p{
+              color: #BDBDBD;
+            }
+            .footer ul {
+              color:  #BDBDBD;
+              list-style-type: none;
+              padding: 0;
+              margin: 0;
+              
+            }
+            .footer .sayfalar-list li {
+              margin-bottom: 10px;
+              transition: 0.5s ease;
+              width: 200px;
+              border-bottom: 1px solid #333;
+            }
+            .footer ul li:hover{
+              color: white;
+            }
+            .footer .sonyorum-list li {
+              margin-bottom: 10px;
+              transition: 0.5s ease;
+              width: 400px;
+              border-bottom: 1px solid #333;
+            }
+            .footer ul li:hover{
+              color: white;
+            }
+            #footer-end{
+                position: relative;
+                width: 100%;
+                margin: 0 auto;
+                margin-bottom: 50px;
+            }
+            
+            .footer-end-bg{
+              position: absolute;
+              opacity: 0.5;
+              width: 100%;
+              background-color: black;
+              height: 50px;
+              
+            }
+            
+            .textt{
+              
+              color: white;
+              font-size: 20px;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+              text-align: center;
+              
+              
+            }
+        
+        
+        
+      
+
+   
+   
+    </style>
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div id="üst-alan">
+        <div class="row">
+          <div class="col-md-12">
+        <nav class="navbar navbar-expand-lg navbar-default fixed-top ">
+          <div class="container">
+              <a class="navbar-brand" href="#">kISISEL BLOG</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item ">
+                      <a class="nav-link" href="#">ANASAYFA <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">ÇALIŞMALARIM</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">SOSYAL MEDYA</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">EĞLENCE</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+            </div>
+          </div>
+          <div class="üst-alan-orta">
+            <div class="row text-center">
+              <div class="col-md-12">
+                <h1>BERKAY AKKUŞ</h1>
+              </div>
+              <div class="col-md-12">
+                  <h4>Kişisel Blog Sitesi</h4>
+              </div>
+              <div class="col-md-12">
+                  <button class="btn btn-default kesfet">KEŞFET</button>
+              </div>
+              <div class="col-md-12">
+                  <h3>“Eğer bir gün benim sözlerim bilimle ters düşerse bilimi seçin” </h3>
+                  <h3>Mustafa Kemal Atatürk</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="orta-alan">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 wow fadeInUp data-wow-duration="10s"">
+                <h2 align="center ">HAKKIMDA</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                  <div class="media birinci wow fadeIn ">
+                    <div class="yuvarlak">
+                      <i class="fa fa-graduation-cap fa-3x"></i>
+                    </div>
+                      <div class="media-body">
+                        <h5 class="mt-0">EĞİTİM</h5>
+                        <p> Bilecik Şeyh Edebali Üniversitesi'nde Yönetim Bilişim Sistemleri 3. Sınıf Öğrencisiyim</p>
+                      </div>
+                    </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="media ikinci wow fadeIn">
+                    <div class="yuvarlak ">
+                     <i class="fa fa-book fa-3x"></i>
+                     </div>
+                      <div class="media-body">
+                        <h5 class="mt-0">PROJELER</h5>
+                        <p> şuanda görmüş olduğunuz kişisel blog sitesi bunu yanında javascript ve jquery kod geliştirmek</p>
+                      </div>
+                    </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="media  üçüncü wow fadeIn">
+                    <div class="yuvarlak">
+                        <i class="fa fa-star fa-3x"></i>
+                    </div>
+                      <div class="media-body">
+                        <h5 class="mt-0">HOBİLER</h5>
+                        <p> Bilgisayar oyunları, Film izlemek(bilim kurgu ağırlıklı), teknolojiyi takip etmek</p>
+                      </div>
+                    </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="media dördüncü wow fadeIn">
+                    <div class="yuvarlak ">
+                      <i class="fa fa-road fa-3x"></i>
+                    </div>
+                      <div class="media-body">
+                        <h5 class="mt-0">HEDEFLER</h5>
+                        <p> front-end alanında kendimi geliştirebildiğim kadar geliştirmek ve bu alanda uzmanlaşmak</p>
+                      </div>
+                    </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div id="orta-alan-alt">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8">
+                <div class="col-md-12">
+                <div class="card" >
+                  <img class="card-img-top" src="foto2.jpg" alt="Card image cap">
+                  <div class="card-body">
+                   <a href=""> <h5 class="card-title">Arılar İle İlgili Makalem</h5> </a>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed atque voluptates in minus ea repellat dolore, fugit ipsa deserunt et provident officia natus suscipit dolorum quae incidunt velit eius eos.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quibusdam aliquam labore, tempore eligendi harum non hic nam dolor adipisci mollitia sed minima qui blanditiis voluptate quasi. Hic, iure earum.
+                    </p>
+                    <div class="makale-button ">
+                      <a href="#" class="btn btn-primary devamı">devamını oku</a>
+                    </div>
+                  </div>
+                </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="card" >
+                      <img class="card-img-top" src="ugur-bocegi.jpg" alt="Card image cap">
+                      <div class="card-body">
+                       <a href=""> <h5 class="card-title">Uğur Böcekleri ile İlgili Makalem</h5> </a>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed atque voluptates in minus ea repellat dolore, fugit ipsa deserunt et provident officia natus suscipit dolorum quae incidunt velit eius eos.
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quibusdam aliquam labore, tempore eligendi harum non hic nam dolor adipisci mollitia sed minima qui blanditiis voluptate quasi. Hic, iure earum.
+                        </p>
+                        <div class="makale-button ">
+                          <a href="#" class="btn btn-primary devamı">devamını oku</a>
+                        </div>
+                      </div>
+                    </div>
+                    </div>    
+              </div>
+
+              <div class="col-md-4">
+                <div class="col-md-12">
+                    <div class="input-group">
+                         <input type="text" class="form-control" placeholder="Sitede Arama Yap" aria-label="Username" aria-describedby="basic-addon1">
+                         <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i>
+                            </span>
+                          </div>
+                      </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="card profil" style="width: 18rem;">
+                        <img class="card-img-top" src="profil.jpg" alt="Card image cap">
+                        <div align="center" class="card-body profilim">
+                          <h4 class="profil-title">Sosyal Medyada Beni Bul</h4>
+                            <i class="fa fa-facebook-square fa-2x"></i>
+                            <i class="fa fa-twitter-square fa-2x"></i>
+                            <i class="fa fa-instagram fa-2x"></i>
+                            <i class="fa fa-twitch fa-2x"></i>
+                       </div>
+                   </div>
+                </div>
+                <div class="col-md-12">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <a href=""> <h5 class="card-title">Son İzlediğim Film</h5> </a>
+                    </div>
+                    <div class="card-bottom">
+                      
+                      <div class="card-img-top zoom" alt="Card image cap"></div>
+                      
+                    </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                  <div class="card" style="width: 18rem;">
+                      <div class="card-body">
+                          <a href=""> <h5 class="card-title">Son Okuduğum Kitap</h5> </a>
+                      </div>
+                      <div class="card-bottom">
+                        
+                        <div class="card-img-top zoom2" alt="Card image cap"></div>
+                        
+                      </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="pop-makale">
+                    <div class="makale">
+                      <h4 class="pop-makale-text">Popüler Makaleler</h4>
+                      <div class="media">
+                          <img class="mr-3 pop-makale-img" src="foto2.jpg" alt="Generic placeholder image">
+                          <div class="media-body">
+                            <h5 class="mt-0 pop-makale-yanyazi">Arılar ile ilgili makale</h5>
+                            <h5 class="pop-makale-tarih">20 Ocak 2018|28 yorum</h5>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="makale">
+                        <div class="media">
+                            <img class="mr-3 pop-makale-img" src="ugur-bocegi.jpg" alt="Generic placeholder image">
+                            <div class="media-body">
+                              <h5 class="mt-0 pop-makale-yanyazi">Arılar ile ilgili makale</h5>
+                              <h5 class="pop-makale-tarih">18 şubat 2018|28 yorum</h5>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="makale">
+                          <div class="media">
+                              <img class="mr-3 pop-makale-img" src="foto2.jpg" alt="Generic placeholder image">
+                              <div class="media-body">
+                                <h5 class="mt-0 pop-makale-yanyazi">Arılar ile ilgili makale</h5>
+                                <h5 class="pop-makale-tarih">10 Mart 2018|28 yorum</h5>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="makale">
+                            <div class="media">
+                                <img class="mr-3 pop-makale-img" src="ugur-bocegi.jpg" alt="Generic placeholder image">
+                                <div class="media-body">
+                                  <h5 class="mt-0 pop-makale-yanyazi">Arılar ile ilgili makale</h5>
+                                  <h5 class="pop-makale-tarih">18 Mart 2018|28 yorum</h5>
+                                </div>
+                              </div>
+                          </div>
+                          <div class="makale">
+                              <div class="media">
+                                  <img class="mr-3 pop-makale-img" src="ugur-bocegi.jpg" alt="Generic placeholder image">
+                                  <div class="media-body">
+                                    <h5 class="mt-0 pop-makale-yanyazi">Arılar ile ilgili makale</h5>
+                                    <h5 class="pop-makale-tarih">19 Mart 2018|28 yorum</h5>
+                                  </div>
+                                </div>
+                            </div>
+                      </div>
+                  </div>
+                  
+                  
+                </div>
+              </div>
+            </div>
+           
+          </div>
+          <div id="alt-alan-üst">
+            <div class="container">
+                <h2 class=" alt-alan-üst-text" align="center">TEKNOLOJİ HABERLERİ</h2>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="üst-alan">
+                                <img src="teknolojik1.jpg" alt="Avatar" class="image">
+                                <div class="overlay">
+                                <div class="text">Bitcoin Durumu</div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                            <div class="üst-alan">
+                                    <img src="teknolojik2.jpg" alt="Avatar" class="image">
+                                    <div class="overlay">
+                                    <div class="text">E-Spor Gündemi</div>
+                                    </div>
+                            </div>
+                    </div>
+                    <div class="col-md-3">
+                            <div class="üst-alan">
+                                    <img src="teknolojik3.jpg" alt="Avatar" class="image">
+                                    <div class="overlay">
+                                    <div class="text">Günümüzde Yapay Zeka</div>
+                                    </div>
+                            </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="üst-alan">
+                                <img src="teknolojik4.jpg" alt="Avatar" class="image">
+                                <div class="overlay">
+                                <div class="text">Mobile Gündem</div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="üst-alan">
+                                <img src="teknolojik5.jpg" alt="Avatar" class="image">
+                                <div class="overlay">
+                                <div class="text">Teslaya Rakip</div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                            <div class="üst-alan">
+                                    <img src="teknolojik6.jpg" alt="Avatar" class="image">
+                                    <div class="overlay">
+                                    <div class="text">İnstagrama Yeni Özellik</div>
+                                    </div>
+                            </div>
+                    </div>
+                    <div class="col-md-3">
+                            <div class="üst-alan">
+                                    <img src="teknolojik7.jpg" alt="Avatar" class="image">
+                                    <div class="overlay">
+                                    <div class="text">Kara Tahtada Word Öğreten Hocaya PC Sözü</div>
+                                    </div>
+                            </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="üst-alan">
+                                <img src="teknolojik8.jpeg" alt="Avatar" class="image">
+                                <div class="overlay">
+                                  <div class="text">Devasa Teleskop</div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div id="footer">
+            <div class="container">
+              <div class="footer">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="footer-vizyon">
+                      <a class="footer-text1" href=""><h4>Vizyon</h4></a>
+                      <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam sequi atque ex expedita adipisci illum, excepturi placeat, tempora veniam, impedit nihil? Libero rem corrupti soluta est odit, velit dolorum iste.   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, iure commodi? Consequatur dolorem dolor incidunt, ad voluptate natus soluta unde culpa tenetur corporis repellendus facilis, libero officiis ipsam illum quod!</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="footer-sayfalar">
+                        <a class="footer-text2" href=""><h4>Sayfalar</h4></a>
+                        <ul class="sayfalar-list">
+                          <a href=""><li>ANASAYFA</li></a>
+                          <a href=""><li>ÇALIŞMALARIM</li></a>
+                          <a href=""><li>SOSYAL MEDYA</li></a>
+                          <a href=""><li>EĞLENCE</li></a>
+                        </ul>
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="footer-sonyorum">
+                        <a class="footer-text3" href=""><h4>Son Yorumlar</h4></a>
+                        <ul class="sonyorum-list">
+                            <a href=""><li>yorum1 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi, nam! Aliquam in molestiae voluptate ut sapiente, deleniti inventore error mollitia, ratione blanditiis voluptatibus culpa! Veniam quaerat aut enim amet architecto.</li></a>
+                            <a href=""><li>yorum2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi facere optio, magnam nesciunt sit eum, quia excepturi possimus nam nihil blanditiis aut est! Cupiditate repudiandae eum dolorem dignissimos mollitia tempora?</li></a>
+                          </ul>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div id="footer-end">
+                <div class="footer-end-bg">
+                    <div align="center" class="textt"> © BU SİTE BERKAY AKKUŞ TARAFINDAN TASARLANMIŞTIR</div>
+                </div>
+                
+              </div>
+          </div>
+          
+      </div>
+      
+
+
+
+
+  
+
+    
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function(){
+        var islem=0;
+        $(window).scroll(function(){
+          var heigth=$(this).scrollTop(); 
+          if(heigth>100)
+          {
+           $(".fixed-top").addClass("chance-menü");
+          }
+          else{
+            $(".fixed-top").removeClass("chance-menü");
+          }
+          if(heigth>200){
+            
+            
+          }
+        });
+        $(".kesfet").click(function(){
+          $("html,body").animate({scrollTop:$("#orta-alan").offset().top},1000);
+        });
+        $(".devamı").mouseover(function(){
+          $(this).addClass("animated bounceIn");
+        });
+        $(".devamı").mouseleave(function(){
+          $(this).removeClass("animated bounceIn");
+        });
+      });
+    </script>
+     <script src="wow.js"></script>
+     <script>
+     new WOW().init();
+     </script>
+</body>
+</html>
